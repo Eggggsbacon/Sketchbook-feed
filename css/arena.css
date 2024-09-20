@@ -1,7 +1,8 @@
 /* Reset and Box Model */
 * {
     box-sizing: border-box;
-    margin: 8px 8px 8px 8px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Base Styles */
