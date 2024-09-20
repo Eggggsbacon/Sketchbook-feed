@@ -133,7 +133,8 @@ video {
 /* Post Title and Description */
 #post-title,
 #post-desc {
-    display: none;
+    display: block;
+    max-width: 100%;
 }
 
 /* Post Embed */
@@ -183,7 +184,7 @@ video {
     }
 
     #loading {
-        align-items: center;
+        align-items: left;
     }
 
     .post img {
