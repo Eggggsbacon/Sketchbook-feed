@@ -109,7 +109,7 @@ video {
     align-items: center;
     position: relative;
     border-radius: 3rem;
-    padding: 4px 4px 0px 0px;
+    padding: 0px 0px 8px 8px;
 }
 
 .post img {
