@@ -132,7 +132,7 @@ video {
 /* Post Title and Description */
 #post-title,
 #post-desc {
-    display: block;
+    display: none;
 }
 
 /* Post Embed */
