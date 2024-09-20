@@ -1,6 +1,6 @@
 // Define constants
 const settings = {
-    channelslug: "home-and-studio",
+    channelslug: "sketchbook-feed",
   };
   const queryOptions = {
     page: 0,
