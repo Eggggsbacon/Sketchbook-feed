@@ -189,8 +189,8 @@ video {
     }
 
     .post img {
-        /* width: 100vw !important;
-        max-height: inherit !important; */
+        width: 100vw !important;
+        max-height: inherit !important;
     }
 
     .post-image {
