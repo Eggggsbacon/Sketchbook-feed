@@ -189,8 +189,8 @@ video {
     }
 
     .post img {
-        width: 100vw !important;
-        max-height: inherit !important;
+        /* width: 100vw !important;
+        max-height: inherit !important; */
     }
 
     .post-image {
@@ -204,7 +204,7 @@ video {
     .post-embed {
         position: relative;
         overflow: hidden;
-        padding-top: 100% !important;
+        /* padding-top: 100% !important; */
         width: 100vw;
     }
 
