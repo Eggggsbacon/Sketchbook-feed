@@ -184,6 +184,10 @@ video {
         margin: 8px 8px 8px 8px;
     }
 
+    #posts-container {
+        margin: 0;
+    }
+
     #loading {
         align-items: left;
     }
