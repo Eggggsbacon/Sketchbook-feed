@@ -132,7 +132,7 @@ video {
 /* Post Title and Description */
 #post-title,
 #post-desc {
-    display: none;
+    display: block;
 }
 
 /* Post Embed */
@@ -149,7 +149,7 @@ video {
 /* Post Text */
 .post-text {
     display: block;
-    padding: 80px 0;
+    padding: 0px 0;
     min-width: 500px;
 }
 
