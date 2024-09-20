@@ -55,7 +55,7 @@ video {
     height: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: left;
     z-index: 999;
     visibility: hidden;
     opacity: 0;
@@ -97,7 +97,7 @@ video {
 #posts-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: flex-end;
     width: 100%;
 }
@@ -105,8 +105,8 @@ video {
 /* Post Styles */
 .post {
     display: flex;
-    justify-content: center;
-    align-items: left;
+    justify-content: left;
+    align-items: center;
     position: relative;
     border-radius: 3rem;
 }
