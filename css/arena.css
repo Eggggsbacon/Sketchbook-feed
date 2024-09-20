@@ -205,7 +205,7 @@ video {
         position: relative;
         overflow: hidden;
         /* padding-top: 100% !important; */
-        /* width: 100vw; */
+        width: 100vw;
     }
 
     .post-embed iframe {
