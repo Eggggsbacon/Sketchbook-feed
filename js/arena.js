@@ -6,7 +6,7 @@ const settings = {
     page: 0,
     direction: "desc",
     sort: "position",
-    per: 6,
+    per: 8,
   };
   
   // Define variables
