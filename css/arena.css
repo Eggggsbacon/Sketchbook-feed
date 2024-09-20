@@ -106,7 +106,7 @@ video {
 .post {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     position: relative;
     border-radius: 3rem;
 }
