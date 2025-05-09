@@ -119,8 +119,8 @@ video {
 
 .post img {
     display: block;
-    max-height: 500px;
-    width: 30%;
+    max-height: 60vh;
+    width: auto;
 }
 
 .post p {
