@@ -37,7 +37,7 @@ a {
 img,
 embed,
 video {
-    max-width: 20vw;
+    max-width: 100%;
     height: auto;
 }
 
@@ -119,7 +119,7 @@ video {
 
 .post img {
     display: block;
-    max-height: 50%;
+    max-height: 20vw;
     width: auto;
 }
 
