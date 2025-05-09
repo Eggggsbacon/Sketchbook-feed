@@ -120,7 +120,7 @@ video {
 .post img {
     display: block;
     height: auto;
-    max-width: 500px;
+    width: 30%;
 }
 
 .post p {
