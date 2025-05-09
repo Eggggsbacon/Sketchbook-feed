@@ -37,7 +37,7 @@ a {
 img,
 embed,
 video {
-    max-width: 100%;
+    max-width: 20vw;
     height: auto;
 }
 
