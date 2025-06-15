@@ -6,7 +6,7 @@
 }
 
 #intro {
-    padding: 8px;
+    padding: 8px 0px 0px 8px; 
 }
 
 /* Base Styles */
@@ -29,118 +29,4 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Images and Embeds */
-img,
-embed,
-video {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
-}
-
-/* Loading Indicator */
-.is-visible {
-    visibility: visible;
-    opacity: 1;
-}
-
-.not-visible {
-    visibility: hidden;
-    opacity: 0;
-}
-
-#loading {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: left;
-    z-index: 999;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 100s, visibility 1.3s;
-}
-
-#loading:after {
-    content: ".";
-    animation: dots .65s steps(5, end) infinite;
-    font-size: 2rem;
-    color: darkgrey;
-}
-
-@keyframes dots {
-    0%, 20% {
-        color: rgba(0, 0, 0, 0);
-        text-shadow: .25em 0 0 rgba(0, 0, 0, 0), .5em 0 0 rgba(0, 0, 0, 0);
-    }
-    40% {
-        color: darkgrey;
-        text-shadow: .25em 0 0 rgba(0, 0, 0, 0), .5em 0 0 rgba(0, 0, 0, 0);
-    }
-    60% {
-        text-shadow: .25em 0 0 darkgrey, .5em 0 0 rgba(0, 0, 0, 0);
-    }
-    80%, 100% {
-        text-shadow: .25em 0 0 darkgrey, .5em 0 0 darkgrey;
-    }
-}
-
-/* Arena Layout */
-#arena {
-    position: relative;
-    margin: 0;
-}
-
-/* Posts Container: Flex Wrap */
-#posts-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px; /* consistent spacing between items */
-    padding: 8px;
-}
-
-/* Post Styles */
-.post {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    border-radius: 1rem;
-}
-
-/* Images inside posts */
-.post img {
-    display: block;
-    max-height: 60vh;
-    width: auto;
-    vertical-align: bottom;
-}
-
-/* Optional text inside posts */
-.post p {
-    display: block;
-    max-width: 400px;
-    color: rgba(100, 100, 100, 1);
-    font-size: 0.8rem;
-}
-
-.post p a:link {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
-}
-
-/* Hide title/desc by default */
-#post-title,
-#post-desc {
-    display: none;
-    max-width: 100%;
-}
-
-/* Templates */
-.post-image {
-    d
+    text-decoration: no
