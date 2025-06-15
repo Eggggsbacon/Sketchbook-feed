@@ -84,10 +84,14 @@ const addImagePost = (post) => {
   const img = $("img", imageTemplate);
   img.attr("src", post.image.original.url);
 
-  // ✨ Random height scaling (±20%)
-  const scale = (Math.random() * 0.4 + 0.8).toFixed(2); // 0.8 – 1.2
-  img.css("transform", `scaleY(${scale})`);
-  img.css("transform-origin", "top"); // makes it stretch downward
+  // Random width (e.g. 70% to 100%)
+  const widthPercent = (Math.random() * 30 + 70).toFixed(0); // 70%–100%
+  img.css({
+    width: `${widthPercent}%`,
+    height: 'auto', // keeps aspect ratio
+    display: 'block', // removes bottom gap
+    margin: '0 auto' // center it in container
+  });
 
   return imageTemplate;
 };
