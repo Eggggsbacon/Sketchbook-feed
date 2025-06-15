@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- -->
-    <meta name="description" content="Hayden Daniel Sketchbook">
-	<meta name="author" content="Hayden Daniel Sketchbook">
-    <link rel="alternate" type="application/rss+xml" href="https://www.are.na/hayden-daniel/sketchbook-feed/feed/rss" />
-    <!-- -->
-    <title>Hayden Daniel Sketchbook</title>
-    <link rel="stylesheet" href="css/arena.css"> 
-    
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Hayden Daniel Sketchbook" />
+  <meta name="author" content="Hayden Daniel Sketchbook" />
+  <link rel="alternate" type="application/rss+xml" href="https://www.are.na/hayden-daniel/sketchbook-feed/feed/rss" />
+  <title>Hayden Daniel Sketchbook</title>
+  <link rel="stylesheet" href="css/arena.css" />
 </head>
 <body>
-         
-<p id="intro">
+
+  <p id="intro">
     Hayden Daniel is a user interface designer and illustrator.
-</p>
+  </p>
 
-<!-- ARENA -->
-        
-<div id="arena">
-    
+  <div id="arena">
     <div id="loading"></div>
-	<div id="posts-container">
-        <!-- content goes here -->
+
+    <div id="posts-container">
+      <!-- Dynamically loaded posts go here -->
     </div>
 
-<!-- TEMPLATES -->
-<div style="display: none">
+    <!-- TEMPLATES (hidden) -->
+    <div style="display: none">
 
-    <div id="postTemplate" class="post">
+      <div id="postTemplate" class="post">
         <div id="mediacontainer"></div>
-    </div>
-        
-<!-- IMAGE TEMPLATE --> 
+      </div>
 
-    <div id="imageTemplate" class="post-image">
-        <!-- <a href="#" target="_blank" class="hyperlink"> -->
-        <img src="" width="" height="" />
-        <!-- </a> -->
+      <!-- IMAGE TEMPLATE -->
+      <div id="imageTemplate" class="post-image post">
+        <img src="" alt="" />
         <div id="post-title"></div>
         <div id="post-desc"></div>
-	</div>
-        
-<!-- TEXT TEMPLATE --> 
+      </div>
 
-    <div id="textTemplate" class="post-text">
+      <!-- TEXT TEMPLATE -->
+      <div id="textTemplate" class="post-text post">
         <a href="#" target="_blank" class="hyperlink">
-        <div id="post-title"></div>
-        <div id="post-content"></div>
+          <div id="post-title"></div>
+          <div id="post-content"></div>
         </a>
-    </div>
-        
-<!-- MEDIA TEMPLATE --> 
+      </div>
 
-    <div id="mediaTemplate">
+      <!-- MEDIA TEMPLATE -->
+      <div id="mediaTemplate" class="post">
         <div id="post-content" class="post-embed">
-        <iframe src="" id="player"></iframe>
+          <iframe src="" id="player" frameborder="0" allowfullscreen></iframe>
         </div>
         <a href="#" target="_blank">
-        <div id="post-title"></div></a>
+          <div id="post-title"></div>
+        </a>
         <div id="post-desc"></div>
-    </div>
+      </div>
 
-<!-- LINK TEMPLATE -->        
-        
-    <div id="linkTemplate" class="post-link">
+      <!-- LINK TEMPLATE -->
+      <div id="linkTemplate" class="post-link post">
         <a href="#" target="_blank">
-        <div class="post-link-arrow"></div>
-        <img src="" width="" height=""/></a>
+          <div class="post-link-arrow"></div>
+          <img src="" alt="" />
+        </a>
         <a href="#" target="_blank">
-        <div id="post-title"></div></a>
+          <div id="post-title"></div>
+        </a>
         <div id="post-desc"></div>
+      </div>
+
     </div>
-		
-</div><!-- END TEMPLATES -->        
-</div><!-- END ARENA -->
-    
-<!-- JS -->    
-    
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/arena.js"></script>
-    
-</body>
-</html>
+  </div
