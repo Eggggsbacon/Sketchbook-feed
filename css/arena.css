@@ -6,7 +6,7 @@
 }
 
 #intro {
-    padding: 8px 0px 0px 8px; 
+    padding: 8px;
 }
 
 /* Base Styles */
@@ -39,6 +39,7 @@ embed,
 video {
     max-width: 100%;
     height: auto;
+    vertical-align: bottom;
 }
 
 /* Loading Indicator */
@@ -66,7 +67,6 @@ video {
     transition: opacity 100s, visibility 1.3s;
 }
 
-/* Loading Dots */
 #loading:after {
     content: ".";
     animation: dots .65s steps(5, end) infinite;
@@ -91,16 +91,17 @@ video {
     }
 }
 
-/* Arena Styles */
+/* Arena Layout */
 #arena {
     position: relative;
     margin: 0;
 }
 
-/* Posts Container */
+/* Posts Container: Flex Wrap */
 #posts-container {
-    column-count: 3;
-    column-gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* consistent spacing between items */
     padding: 8px;
 }
 
@@ -108,21 +109,22 @@ video {
 .post {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
-    border-radius: 3rem;
-    padding: 0px 8px 8px 0px;
+    border-radius: 1rem;
 }
 
+/* Images inside posts */
 .post img {
     display: block;
     max-height: 60vh;
     width: auto;
+    vertical-align: bottom;
 }
 
+/* Optional text inside posts */
 .post p {
     display: block;
-    padding: 0px;
     max-width: 400px;
     color: rgba(100, 100, 100, 1);
     font-size: 0.8rem;
@@ -132,95 +134,13 @@ video {
     border-bottom: 1px solid rgba(0, 0, 0, 0.9);
 }
 
-/* Post Title and Description */
+/* Hide title/desc by default */
 #post-title,
 #post-desc {
     display: none;
     max-width: 100%;
 }
 
-/* Post Embed */
-.post-embed {}
-
-
-/* Post Image */
+/* Templates */
 .post-image {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 1em;
-    break-inside: avoid;
-}
-
-/* Post Text */
-.post-text {
-    display: block;
-    padding: 0px;
-    min-width: 500px;
-}
-
-.post-text p {
-    font-size: 2rem;
-    text-align: center;
-    margin: 0 auto;
-}
-
-/* Post Link */
-.post-link {
-    border: 1px solid #f2f2f2;
-    position: relative;
-}
-
-.post-link-arrow {
-    position: absolute;
-    bottom: 1.75rem;
-    right: 1.75rem;
-    width: 12px;
-    height: 12px;
-    border-radius: 50px;
-    background-color: rgba(51, 102, 255, 1);
-}
-
-/* Mobile Styles */
-@media only screen and (max-width: 768px) {
-    #arena {
-        margin: 8px 0px 8px 8px;
-    }
-
-    #posts-container {
-    column-count: 1;
-    column-gap: 0;
-  }
-
-    #loading {
-        align-items: left;
-    }
-
-    .post img {
-        width: 100vw !important;
-        max-height: inherit !important;
-    }
-
-    .post-image {
-        max-width: 100%;
-    }
-
-    .post-text {
-        min-width: inherit !important;
-    }
-
-    .post-embed {
-        position: relative;
-        overflow: hidden;
-        /* padding-top: 100% !important; */
-        width: 100vw;
-    }
-
-    .post-embed iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-}
+    d
