@@ -84,8 +84,8 @@ const addImagePost = (post) => {
   const img = $("img", imageTemplate);
   img.attr("src", post.image.original.url);
 
-  // Random width (e.g. 70% to 100%)
-  const widthPercent = (Math.random() * 30 + 70).toFixed(0); // 70%–100%
+  // Random width (e.g. 60% to 100%)
+  const widthPercent = (Math.random() * 40 + 60).toFixed(0); // 60%–100%
   img.css({
     width: `${widthPercent}%`,
     height: 'auto', // keeps aspect ratio
