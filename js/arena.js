@@ -71,18 +71,28 @@ const settings = {
     $("#posts-container").append(template);
   };
   
-  const addImagePost = (post) => {
-    const imageTemplate = getTemplate("#imageTemplate");
-    if (post.generated_title !== "Untitled") {
-      $("#post-title", imageTemplate).html(post.generated_title);
-    }
-    $("#post-desc", imageTemplate).html(post.description_html);
-    $("a.hyperlink", imageTemplate).attr("href", `https://www.are.na/block/${post.id}`);
-    $("img", imageTemplate).attr("src", post.image.original.url);
-    return imageTemplate;
-  };
+const addImagePost = (post) => {
+  const imageTemplate = getTemplate("#imageTemplate");
+
+  if (post.generated_title !== "Untitled") {
+    $("#post-title", imageTemplate).html(post.generated_title);
+  }
+
+  $("#post-desc", imageTemplate).html(post.description_html);
+  $("a.hyperlink", imageTemplate).attr("href", `https://www.are.na/block/${post.id}`);
+
+  const img = $("img", imageTemplate);
+  img.attr("src", post.image.original.url);
+
+  // ✨ Random height scaling (±20%)
+  const scale = (Math.random() * 0.4 + 0.8).toFixed(2); // 0.8 – 1.2
+  img.css("transform", `scaleY(${scale})`);
+  img.css("transform-origin", "top"); // makes it stretch downward
+
+  return imageTemplate;
+};
   
-  const addTextPost = (post) => {
+const addTextPost = (post) => {
     const textTemplate = getTemplate("#textTemplate");
     if (post.generated_title !== "Untitled") {
       $("#post-title", textTemplate).text(post.generated_title);
