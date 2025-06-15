@@ -20,7 +20,7 @@ const settings = {
   };
   
   const buildQuery = () => {
-    return `https://api.are.na/v2/channels/${settings.channelslug}/contents?${$.param(queryOptions)}`;
+    return https://api.are.na/v2/channels/${settings.channelslug}/contents?${$.param(queryOptions)};
   };
   
   const loadPosts = (url) => {
@@ -41,7 +41,7 @@ const settings = {
       .fail((jqxhr, textStatus, error) => {
         console.log(jqxhr, textStatus, error);
         console.log(jqxhr.statusCode());
-        $("#loading").text(`${textStatus}, ${error}`);
+        $("#loading").text(${textStatus}, ${error});
       });
   };
   
@@ -71,37 +71,23 @@ const settings = {
     $("#posts-container").append(template);
   };
   
-const addImagePost = (post) => {
-  const imageTemplate = getTemplate("#imageTemplate");
-
-  if (post.generated_title !== "Untitled") {
-    $("#post-title", imageTemplate).html(post.generated_title);
-  }
-
-  $("#post-desc", imageTemplate).html(post.description_html);
-  $("a.hyperlink", imageTemplate).attr("href", `https://www.are.na/block/${post.id}`);
-
-  const img = $("img", imageTemplate);
-  img.attr("src", post.image.original.url);
-
-  // Random width (e.g. 60% to 100%)
-  const widthPercent = (Math.random() * 40 + 60).toFixed(0); // 60%–100%
-  img.css({
-    width: `${widthPercent}%`,
-    height: 'auto', // keeps aspect ratio
-    display: 'block', // removes bottom gap
-    margin: '0 auto' // center it in container
-  });
-
-  return imageTemplate;
-};
+  const addImagePost = (post) => {
+    const imageTemplate = getTemplate("#imageTemplate");
+    if (post.generated_title !== "Untitled") {
+      $("#post-title", imageTemplate).html(post.generated_title);
+    }
+    $("#post-desc", imageTemplate).html(post.description_html);
+    $("a.hyperlink", imageTemplate).attr("href", https://www.are.na/block/${post.id});
+    $("img", imageTemplate).attr("src", post.image.original.url);
+    return imageTemplate;
+  };
   
-const addTextPost = (post) => {
+  const addTextPost = (post) => {
     const textTemplate = getTemplate("#textTemplate");
     if (post.generated_title !== "Untitled") {
       $("#post-title", textTemplate).text(post.generated_title);
     }
-    $("a.hyperlink", textTemplate).attr("href", `https://www.are.na/block/${post.id}`);
+    $("a.hyperlink", textTemplate).attr("href", https://www.are.na/block/${post.id});
     $("#post-content", textTemplate).html(post.content_html);
     return textTemplate;
   };
